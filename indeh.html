@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bella Donna — Apresentação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --bg:#fbfbfb;
+        --card:#ffffff;
+        --accent:#f6e9e6; /* blush */
+        --muted:#7aa68a; /* soft green */
+        --text:#2b2b2b;
+        --muted-text:#6b6b6b;
+        --radius:12px;
+      }
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{
+        margin:0;
+        font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+        background:var(--bg);
+        color:var(--text);
+        -webkit-font-smoothing:antialiased;
+      }
+      header{display:flex;align-items:center;justify-content:space-between;padding:20px 28px}
+      .logo{font-weight:700;color:var(--text);letter-spacing:0.4px}
+      nav a{margin-left:18px;color:var(--muted-text);text-decoration:none;font-weight:500}
+
+      .hero{
+        background:linear-gradient(180deg, rgba(246,233,230,0.6), rgba(255,255,255,0.6));
+        padding:56px 20px;
+        display:flex;gap:40px;align-items:center;justify-content:center;flex-wrap:wrap;
+      }
+      .hero .intro{max-width:640px}
+      h1{margin:0 0 12px;font-size:2.2rem}
+      p.lead{margin:0;color:var(--muted-text);line-height:1.6}
+      .cta{margin-top:18px;display:flex;gap:12px}
+      .btn{padding:12px 18px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+      .btn.primary{background:var(--muted);color:white}
+      .btn.ghost{background:transparent;border:1px solid rgba(43,43,43,0.08);color:var(--text)}
+
+      .card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 18px rgba(40,40,40,0.06);padding:18px}
+
+      .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding:28px}
+      .service{display:flex;gap:14px;align-items:flex-start}
+      .service .icon{width:56px;height:56px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+      .service h3{margin:0;font-size:1rem}
+      .service p{margin:6px 0 0;color:var(--muted-text);font-size:0.95rem}
+
+      .about-gallery{display:grid;grid-template-columns:1fr 360px;gap:20px;padding:28px}
+      .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+      .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px}
+
+      .contact{padding:28px}
+      form{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:760px}
+      input,textarea{padding:12px;border-radius:10px;border:1px solid rgba(43,43,43,0.08);font-size:0.95rem}
+      textarea{grid-column:span 2;min-height:110px}
+
+      footer{padding:22px 28px;color:var(--muted-text);font-size:0.95rem}
+
+      @media (max-width:880px){
+        .about-gallery{grid-template-columns:1fr}
+        form{grid-template-columns:1fr}
+        h1{font-size:1.6rem}
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Bella Donna</div>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="intro">
+        <h1>Beleza, cuidado e bem-estar</h1>
+        <p class="lead">No Bella Donna oferecemos serviços personalizados de corte, coloração, unhas e tratamentos capilares. Ambiente acolhedor, profissionais especializados e produtos de qualidade.</p>
+        <div class="cta">
+          <button class="btn primary">Agende agora</button>
+          <button class="btn ghost">Ver serviços</button>
+        </div>
+      </div>
+      <div class="card" style="min-width:300px;max-width:360px">
+        <h3 style="margin-top:0">Horários</h3>
+        <p style="margin:6px 0 12px;color:var(--muted-text)">Seg - Sex: 9h - 19h<br>Sáb: 9h - 16h</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <div style="flex:1;min-width:120px">
+            <strong>Endereço</strong>
+            <div style="color:var(--muted-text)">Av. Ayrton Senna, 1995, Shopping Cidade Verde, Parnamirim - RN</div>
+          </div>
+          <div style="flex:1;min-width:120px">
+            <strong>Telefone</strong>
+            <div style="color:var(--muted-text)">(11) 99999-9999</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="services card">
+        <div class="service">
+          <div class="icon">HC</div>
+          <div>
+            <h3>Cortes & Styling</h3>
+            <p>Consultoria de corte, escovas e finalização para realçar seu estilo.</p>
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">CL</div>
+          <div>
+            <h3>Coloração</h3>
+            <p>Técnicas modernas: mechas, balayage e correção de cor com produtos suaves.</p>
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">TR</div>
+          <div>
+            <h3>Tratamentos</h3>
+            <p>Hidratação profunda, cauterização e cronograma capilar personalizado.</p>
+          </div>
+        </div>
+        <div class="service">
+          <div class="icon">NU</div>
+          <div>
+            <h3>Unhas & Estética</h3>
+            <p>Manicure, pedicure e design de unhas com acabamento profissional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="about-gallery">
+        <div class="card">
+          <h2>Sobre o Salão</h2>
+          <p style="color:var(--muted-text)">O Salão Belleza nasceu da paixão por transformar aparência e autoestima. Nossa equipe é formada por profissionais treinados nas técnicas mais atuais, sempre priorizando saúde e bem-estar.</p>
+          <ul style="color:var(--muted-text)">
+            <li>Atendimento personalizado</li>
+            <li>Produtos profissionais e sustentáveis</li>
+            <li>Ambiente limpo e acolhedor</li>
+          </ul>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Galeria</h3>
+            <div class="gallery" style="margin-top:8px">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="salon1">
+              <img src="https://images.unsplash.com/photo-1556228720-5f6d2b6c5b11?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="salon2">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="salon3">
+              <img src="https://images.unsplash.com/photo-1533777324565-a040eb52fac2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="salon4">
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="card">
+        <h2>Contato & Agendamento</h2>
+        <form>
+          <input type="text" placeholder="Seu nome" />
+          <input type="tel" placeholder="Telefone" />
+          <input type="email" placeholder="Email (opcional)" />
+          <input type="text" placeholder="Serviço desejado" />
+          <textarea placeholder="Mensagem ou preferências"></textarea>
+          <div style="grid-column:span 2;display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn ghost" type="button">Limpar</button>
+            <button class="btn primary" type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div style="max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>© 2026 Bella Donna • Todos os direitos reservados</div>
+        <div style="color:var(--muted-text)">Av. Ayrton Senna, 1995, Shopping Cidade Verde, Parnamirim - RN • (11) 99999-9999</div>
+      </div>
+    </footer>
+  </body>
+</html>
